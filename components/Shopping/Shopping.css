@@ -25,3 +25,16 @@
     padding: var(--spacing-medium);
 
 }
+
+.shopping__close {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 20px;
+    right: 20px;
+    background-image: url(../../image/close.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+}
