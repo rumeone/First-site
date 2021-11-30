@@ -6,15 +6,22 @@ function render () {
 
 }
 
+spinnerPage.render();
+
 let CATALOG = [];
 
 
-fetch('http://myjson.dit.upm.es/api/bins/4fvv')
+//http://myjson.dit.upm.es/api/bins/759f
+
+fetch('http://myjson.dit.upm.es/api/bins/759f1')
     .then(res => res.json())
     .then(body => {
         CATALOG = body;
+        spinnerPage.handleClear();
         render();
     })
     .catch(error => {
-        console.log(error);
+        spinnerPage.handleClear();
+        errorPage.render();
     })
+
